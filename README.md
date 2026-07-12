@@ -7,7 +7,7 @@
 ![Node](https://img.shields.io/badge/Node-TSMC%20130nm-green)
 ![Status](https://img.shields.io/badge/Status-Tape--out%20ready-success)
 
-<!-- HERO IMAGE — replace with your GDSII layout screenshot or block diagram -->
+
 ![SoC GDSII Layout](assets/images/gdsii_layout.png)
 
 ---
@@ -49,7 +49,7 @@ The design was first verified on FPGA, then taken through a **full ASIC backend 
 
 ## Architecture
 
-<!-- Add your block diagram here -->
+
 ![System Block Diagram](assets/images/block_diagram.png)
 
 All five peripherals connect to the ET1035 core through address-decoded, memory-mapped chip selects on the system top-level (`sys_top`):
@@ -76,7 +76,7 @@ Chip Spec → RTL Design → Functional Verification → FPGA Prototyping
 ```
 
 <!-- Optional: timing report screenshot or power breakdown -->
-![Timing Report](assets/images/timing_report.png)
+![Power Report](assets/images/power_report.png)
 
 ---
 
