@@ -75,7 +75,7 @@ Chip Spec → RTL Design → Functional Verification → FPGA Prototyping
    → Sign-off STA (Tempus) → DRC/LVS → GDSII Stream-out
 ```
 
-<!-- Optional: timing report screenshot or power breakdown -->
+
 ![Power Report](assets/images/power_report.png)
 
 ---
@@ -88,7 +88,7 @@ Before backend implementation, functionality was validated on a **Digilent Arty 
 - **Digital Luminance Controller** — UART-driven PWM duty-cycle control for LED brightness
 - **I2C Temperature Reader** — BMP280 sensor interfacing over I2C, results streamed over UART
 
-<!-- Demo photo/gif of a board test -->
+
 ![FPGA Demo](assets/images/fpga_demo.jpg)
 
 ---
@@ -96,13 +96,19 @@ Before backend implementation, functionality was validated on a **Digilent Arty 
 ## Repository Structure
 
 ```
-.
-
-├── ASIC-Physical-Design-Flow      
-├── FPGA-Vivado-Implementation  
-├── LICENSE             # Register maps, datasheets, reports
-├── assets/images/    # Diagrams, screenshots, photos used in this README
-└── README.md
+├── ASIC-Physical-Design-Flow/     # RTL-to-GDSII backend flow (Cadence Genus/Innovus/Tempus, TSMC 130nm)
+│   ├── CLOCK/                     # Clock RTL
+│   ├── GEN_FILES/                 # Constraints file
+│   ├── MEMORY/                    # Program RAM and ROM
+│   ├── PERIPHERALS/                # RTL for UART, GPIO, SPI, I2C, PWM peripheral IP
+│   ├── PROCESSOR/                 # ET1035 RISC-V (RV32IM) core RTL
+│   └── SYSTEM_TOP/                # Top-level integration (sys_top), address decode, APB bus wiring
+├── FPGA-Vivado-Implementation/    # FPGA prototyping and hardware verification (Xilinx Artix-7)
+│   ├── Design/                    # Vivado project sources, constraints (XDC), bitstream build files
+│   └── Tools and Examples/        # Bare-metal C test programs, RISC-V toolchain scripts, UART test utilities
+├── assets/images/                 # Diagrams, screenshots, and photos used in README.md
+├── LICENSE                        # Project license
+└── README.md                      # Project overview, results, and documentation
 ```
 
 ---
