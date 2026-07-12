@@ -100,8 +100,8 @@ Before backend implementation, functionality was validated on a **Digilent Arty 
 │   ├── CLOCK/                     # Clock RTL
 │   ├── GEN_FILES/                 # Constraints file
 │   ├── MEMORY/                    # Program RAM and ROM
-│   ├── PERIPHERALS/                # RTL for UART, GPIO, SPI, I2C, PWM peripheral IP
-│   ├── PROCESSOR/                 # ET1035 RISC-V (RV32IM) core RTL
+│   ├── PERIPHERALS/               # RTL for UART, GPIO, SPI, I2C, PWM peripheral IP
+│   ├── PROCESSOR/                 # ET1035 RISC-V (RV32IM)
 │   └── SYSTEM_TOP/                # Top-level integration (sys_top), address decode, APB bus wiring
 ├── FPGA-Vivado-Implementation/    # FPGA prototyping and hardware verification (Xilinx Artix-7)
 │   ├── Design/                    # Vivado project sources, constraints (XDC), bitstream build files
